@@ -1,11 +1,11 @@
-package com.example.springjdbc.repository;
+package com.example.springjdbc.repository.user;
 
 import com.example.springjdbc.model.User;
 import org.springframework.jdbc.datasource.DataSourceUtils;
 
 import javax.sql.DataSource;
 import java.sql.*;
-import java.util.List;
+import java.util.Optional;
 
 public class JdbcUserRepository implements UserRepository {
 
@@ -43,8 +43,9 @@ public class JdbcUserRepository implements UserRepository {
 
     }
 
+
     @Override
-    public List<User> findAll() {
+    public Optional<User> findAll(String user_id) {
         return null;
     }
 

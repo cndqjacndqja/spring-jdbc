@@ -1,4 +1,4 @@
-package com.example.springjdbc.repository;
+package com.example.springjdbc.repository.user;
 
 import com.example.springjdbc.model.User;
 
@@ -7,5 +7,5 @@ import java.util.Optional;
 
 public interface UserRepository {
     User save(User user);
-    List<User> findAll();
+    Optional<User> findAll(String user_id);
 }

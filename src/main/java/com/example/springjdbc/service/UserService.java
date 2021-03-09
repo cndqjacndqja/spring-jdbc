@@ -1,7 +1,7 @@
 package com.example.springjdbc.service;
 
 import com.example.springjdbc.model.User;
-import com.example.springjdbc.repository.UserRepository;
+import com.example.springjdbc.repository.user.UserRepository;
 
 public class UserService {
 

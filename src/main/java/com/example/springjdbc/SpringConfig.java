@@ -1,14 +1,13 @@
 package com.example.springjdbc;
 
-import com.example.springjdbc.repository.JdbcUserRepository;
-import com.example.springjdbc.repository.UserRepository;
+import com.example.springjdbc.repository.user.JdbcTemplateUserRepository;
+import com.example.springjdbc.repository.user.UserRepository;
 import com.example.springjdbc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
-import javax.xml.crypto.Data;
 
 @Configuration
 public class SpringConfig {
@@ -22,7 +21,8 @@ public class SpringConfig {
 
     @Bean
     public UserRepository userRepository(){
-        return new JdbcUserRepository(dataSource);
+//        return new JdbcUserRepository(dataSource);
+        return new JdbcTemplateUserRepository(dataSource);
     }
 
     @Autowired
