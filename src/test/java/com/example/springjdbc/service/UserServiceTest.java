@@ -1,7 +1,7 @@
 package com.example.springjdbc.service;
 
 import com.example.springjdbc.model.User;
-import com.example.springjdbc.repository.user.UserRepository;
+import com.example.springjdbc.repository.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,9 +16,9 @@ class UserServiceTest {
     void signUp() {
         User user = new User();
         user.setUserId("cads");
-        user.setUserPwd("1231");
+        user.setUserPwd("1231dsafsadf");
 
-        userRepository.save(user);
+        userRepository.signUp(user);
 
     }
 }

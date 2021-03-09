@@ -1,18 +1,18 @@
 package com.example.springjdbc.service;
 
 import com.example.springjdbc.model.User;
-import com.example.springjdbc.repository.user.UserRepository;
+import com.example.springjdbc.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserService {
 
-    private final UserRepository userRepository;
-
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
+    @Autowired
+    UserRepository userRepository;
 
     public Long SignUp(User user){
-        userRepository.save(user);
+        userRepository.signUp(user);
         return user.getUserIdx();
     }
 
