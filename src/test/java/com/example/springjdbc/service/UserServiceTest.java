@@ -1,24 +1,23 @@
 package com.example.springjdbc.service;
 
 import com.example.springjdbc.model.User;
-import com.example.springjdbc.repository.UserRepository;
+import com.jayway.jsonpath.internal.function.text.Length;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class UserServiceTest {
 
     @Autowired
-    UserRepository userRepository;
+    UserService userService;
 
     @Test
-    void signUp() {
-        User user = new User();
-        user.setUserId("cads");
-        user.setUserPwd("1231dsafsadf");
-
-        userRepository.signUp(user);
-
+    void findAll() {
+        List<User> userList = userService.findAll();
     }
 }
